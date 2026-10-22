@@ -9,19 +9,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="navigation.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <nav class="nav container" aria-label="Main navigation">
             <a class="brand" href="#home" aria-label="Raj Lakra, home">Raj Lakra<span>.</span></a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#hobbies">Hobbies</a>
-                <a href="#videos">Videos</a>
-                <a href="#interests">Internship interests</a>
-                <a href="#resume">Resume</a>
+            <button class="nav-toggle" type="button" aria-controls="main-nav-links" aria-expanded="false" hidden>
+                <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+                <span>Menu</span>
+            </button>
+            <div class="nav-menu" id="main-nav-links">
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#education">Education</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">My Projects</a>
+                    <a href="#certificates">Certificates</a>
+                    <a href="#project-work">Project Work</a>
+                    <a href="#hobbies">Hobbies</a>
+                    <a href="#videos">Videos</a>
+                    <a href="#interests">Internship interests</a>
+                    <a href="#resume">Resume</a>
+                </div>
                 <a class="nav-contact" href="#contact">Contact</a>
             </div>
         </nav>
@@ -42,7 +52,7 @@
                 <figure class="hero-portrait">
                     <div class="hero-portrait-frame">
                         <span class="portrait-label">PORTRAIT / 01</span>
-                        <img src="WhatsApp Image 2026-10-22 at 2.46.20 AM.jpeg" alt="Raj Lakra in a suit" width="768" height="1024" fetchpriority="high">
+                        <img src="WhatsApp Image 2026-10-22 at 2.46.20 AM.jpeg" alt="Raj Lakra in a suit" width="768" height="1024" fetchpriority="high" decoding="async">
                     </div>
                     <figcaption>RAJ LAKRA <span>·</span> IMBA</figcaption>
                 </figure>
@@ -139,13 +149,107 @@
             </div>
         </section>
 
+        <section class="content-section section-muted photo-backed" id="projects" aria-labelledby="projects-title">
+            <div class="section-inner container">
+                <div class="section-heading">
+                    <p class="eyebrow">04 — PROJECTS</p>
+                    <h2 id="projects-title">MY PROJECTS</h2>
+                </div>
+                <div class="section-body project-grid">
+                    <article class="practice-card project-card">
+                        <span class="practice-label">PROJECT 01</span>
+                        <h3>Central Coalfield Limited</h3>
+                        <p>Project work presented by Raj Lakra. Explore the original report in the Project Work section.</p>
+                        <a class="text-link project-link" href="#project-work">Explore project work <span aria-hidden="true">→</span></a>
+                    </article>
+                    <!-- Replace this placeholder with verified project details and links. -->
+                    <article class="practice-card project-card">
+                        <span class="practice-label">PLACEHOLDER · PROJECT 02</span>
+                        <h3>Project title to be added</h3>
+                        <p>Placeholder: add a short project description, your role, and a relevant link when available.</p>
+                        <span class="practice-status">DETAILS TO BE ADDED</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="document-showcase content-section section-muted">
+            <div class="showcase-grid container">
+                <section class="showcase-item" id="certificates" aria-labelledby="certificates-title">
+                    <div class="section-heading">
+                        <p class="eyebrow">05 — CERTIFICATES</p>
+                        <h2 id="certificates-title">CERTIFICATES</h2>
+                    </div>
+                    <div class="showcase-content">
+                        <a class="showcase-card" href="mycertificate.jpeg" target="_blank" rel="noopener noreferrer" aria-labelledby="certificate-card-title" aria-describedby="certificate-meta certificate-new-tab">
+                            <div class="showcase-visual certificate-visual">
+                                <div class="certificate-frame">
+                                    <img class="showcase-cover" src="mycertificate.jpeg" alt="Original certificate awarded to Raj Lakra, presented in an elegant frame with all certificate content visible" width="1280" height="963" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            <div class="showcase-caption">
+                                <p class="showcase-kicker">FEATURED CERTIFICATE / 001</p>
+                                <div class="showcase-title-row">
+                                    <h3 id="certificate-card-title">My Certificate</h3>
+                                    <span class="showcase-arrow" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg>
+                                    </span>
+                                </div>
+                                <p class="showcase-meta" id="certificate-meta">ORIGINAL CERTIFICATE · FULL SIZE</p>
+                                <p class="showcase-description">Open the original image to view the certificate at full size.</p>
+                                <span class="visually-hidden" id="certificate-new-tab">Opens the original certificate in a new tab.</span>
+                            </div>
+                        </a>
+                        <div class="showcase-actions">
+                            <a class="showcase-action" href="mycertificate.jpeg" target="_blank" rel="noopener noreferrer">
+                                View Certificate <span class="visually-hidden"> (opens in a new tab)</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="showcase-item" id="project-work" aria-labelledby="project-work-title">
+                    <div class="section-heading">
+                        <p class="eyebrow">06 — PROJECT WORK</p>
+                        <h2 id="project-work-title">PROJECT WORK</h2>
+                    </div>
+                    <div class="showcase-content">
+                        <a class="showcase-card" href="Myprojectwork.pdf" target="_blank" rel="noopener noreferrer" aria-labelledby="featured-project-title" aria-describedby="featured-project-meta featured-project-new-tab">
+                            <div class="showcase-visual">
+                                <img class="showcase-cover" src="images/project-work-thumbnail.webp" alt="Custom CCL project report preview: charcoal presentation with road-plan details and a report mockup showing the Coal India and CCL cover identity" width="1536" height="1024" loading="lazy" decoding="async">
+                            </div>
+                            <div class="showcase-caption">
+                                <p class="showcase-kicker">FEATURED PROJECT / 001</p>
+                                <div class="showcase-title-row">
+                                    <h3 id="featured-project-title">My Project Work</h3>
+                                    <span class="showcase-arrow" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg>
+                                    </span>
+                                </div>
+                                <p class="showcase-meta" id="featured-project-meta">PDF DOCUMENT · 59 PAGES</p>
+                                <p class="showcase-description">Open the original PDF to read the full project report.</p>
+                                <span class="visually-hidden" id="featured-project-new-tab">Opens the original PDF in a new tab.</span>
+                            </div>
+                        </a>
+                        <div class="showcase-actions">
+                            <a class="showcase-action" href="Myprojectwork.pdf" download="Myprojectwork.pdf">
+                                Download PDF
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
         <section class="content-section section-muted photo-backed" id="hobbies" aria-labelledby="hobbies-title">
             <div class="section-inner container">
                 <figure class="hobbies-feature-photo">
-                    <img src="WhatsApp Image 2026-10-21 at 10.31.21 PM.jpeg" alt="Classroom blackboard at Central University of Uttarakhand" width="1024" height="768" loading="lazy">
+                    <img src="WhatsApp Image 2026-10-21 at 10.31.21 PM.jpeg" alt="Classroom blackboard at Central University of Uttarakhand" width="1024" height="768" loading="lazy" decoding="async">
                 </figure>
                 <div class="section-heading">
-                    <p class="eyebrow">04 — HOBBIES</p>
+                    <p class="eyebrow">07 — HOBBIES</p>
                     <h2 id="hobbies-title">Things I enjoy</h2>
                 </div>
                 <div class="section-body">
@@ -182,7 +286,7 @@
         <section class="content-section photo-backed" id="videos" aria-labelledby="videos-title">
             <div class="section-inner container">
                 <div class="section-heading">
-                    <p class="eyebrow">05 — VIDEOS</p>
+                    <p class="eyebrow">08 — VIDEOS</p>
                     <h2 id="videos-title">Video showcase</h2>
                 </div>
                 <div class="section-body video-showcase">
@@ -224,7 +328,7 @@
         <section class="content-section photo-backed" id="interests" aria-labelledby="interests-title">
             <div class="section-inner container">
                 <div class="section-heading">
-                    <p class="eyebrow">06 — INTERNSHIP INTERESTS</p>
+                    <p class="eyebrow">09 — INTERNSHIP INTERESTS</p>
                     <h2 id="interests-title">Where I'd like to contribute</h2>
                 </div>
                 <div class="section-body">
@@ -245,7 +349,7 @@
         <section class="content-section section-muted photo-backed" id="resume" aria-labelledby="resume-title">
             <div class="section-inner container">
                 <div class="section-heading">
-                    <p class="eyebrow">07 — RESUME</p>
+                    <p class="eyebrow">10 — RESUME</p>
                     <h2 id="resume-title">Resume</h2>
                 </div>
                 <div class="section-body resume-panel">
@@ -261,10 +365,10 @@
         <section class="contact-section photo-backed" id="contact" aria-labelledby="contact-title">
             <div class="contact-inner container">
                 <div>
-                    <p class="eyebrow">08 — CONTACT</p>
+                    <p class="eyebrow">11 — CONTACT</p>
                     <h2 id="contact-title">Let's connect.</h2>
                     <p class="contact-copy">I'm open to internship opportunities and practical learning experiences.</p>
-                    <img class="contact-photo" src="WhatsApp Image 2026-10-21 at 10.26.59 PM.jpeg" alt="Raj Lakra outdoors in a field" width="960" height="1280" loading="lazy">
+                    <img class="contact-photo" src="WhatsApp Image 2026-10-21 at 10.26.59 PM.jpeg" alt="Raj Lakra outdoors in a field" width="960" height="1280" loading="lazy" decoding="async">
                 </div>
                 <div class="contact-links">
                     <a href="https://www.linkedin.com/in/raj-lakra-1b2888288" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>linkedin.com/in/raj-lakra-1b2888288</strong><span aria-hidden="true">↗</span></a>
